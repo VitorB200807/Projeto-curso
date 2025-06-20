@@ -1,75 +1,224 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
+  background-color: #f7f9fa;
+  color: #2c3e50;
 }
+
 header {
-  background-color: #2C3E50;
+  background: url('https://images.unsplash.com/photo-1512295767273-ac109ac3acfa') center/cover no-repeat;
   color: white;
   padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
+
 nav ul {
   display: flex;
   list-style: none;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   padding: 0;
+  margin: 0;
 }
+
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
+
+nav a:hover {
+  color: #18bc9c;
+}
+
 section {
   padding: 4rem 2rem;
   text-align: center;
 }
+
 #inicio {
-  background-color: #ECF0F1;
+  background: linear-gradient(to right, #1abc9c, #16a085);
+  color: white;
 }
+
+#inicio h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#inicio p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: #e67e22;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #d35400;
+}
+
 #beneficios {
-  background-color: #BDC3C7;
+  background-color: #ffffff;
 }
+
+.beneficios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.beneficio-item {
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.beneficio-item:hover {
+  transform: translateY(-5px);
+}
+
+.beneficio-item h3 {
+  color: #27ae60;
+}
+
 #depoimentos {
-  background-color: #ECF0F1;
+  background: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c') no-repeat center/cover;
+  color: white;
+  position: relative;
 }
-#inscricao {
-  background-color: #BDC3C7;
+
+#depoimentos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(44, 62, 80, 0.8);
+  z-index: 0;
 }
+
+#depoimentos > * {
+  position: relative;
+  z-index: 1;
+}
+
 .carousel {
   display: flex;
   overflow: hidden;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 2rem auto 1rem;
   position: relative;
 }
+
 .carousel-inner {
   display: flex;
   transition: transform 0.5s ease;
 }
+
 .carousel-item {
   min-width: 100%;
   box-sizing: border-box;
   padding: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
 }
-.carousel-buttons {
-  margin-top: 1rem;
+
+.carousel-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
+
 .carousel-buttons button {
   padding: 0.5rem 1rem;
   margin: 0 0.5rem;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
+
+.carousel-buttons button:hover {
+  background-color: #2980b9;
+}
+
+#inscricao {
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  padding: 4rem 2rem;
+}
+
+#inscricao h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #34495e;
+}
+
 form {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 input, button {
   padding: 0.75rem;
   font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus {
+  border-color: #27ae60;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e8449;
+}
+
+footer {
+  background-color: #2C3E50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .beneficios-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }

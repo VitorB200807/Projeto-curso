@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Memorização Online</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#inscricao">Inscrição</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h1>Desperte o Poder da Sua Memória</h1>
+    <p>Aprenda técnicas comprovadas para memorizar mais e esquecer menos.</p>
+  </section>
+
+  <section id="beneficios">
+    <h2>Benefícios do Curso</h2>
+    <ul>
+      <li>Melhore seu desempenho nos estudos</li>
+      <li>Ganhe agilidade mental</li>
+      <li>Reduza o esquecimento no dia a dia</li>
+      <li>Aprenda com uma metodologia prática e eficaz</li>
+    </ul>
+  </section>
+
+  <section id="depoimentos">
+    <h2>Depoimentos</h2>
+    <div class="carousel">
+      <div class="carousel-inner" id="carouselInner">
+        <div class="carousel-item">"O curso mudou minha vida! Agora lembro de tudo com facilidade." - João M.</div>
+        <div class="carousel-item">"Muito didático e fácil de aplicar. Recomendo a todos!" - Maria S.</div>
+        <div class="carousel-item">"Aprendi mais em 1 mês do que em anos de tentativa sozinho." - Carlos A.</div>
+      </div>
+    </div>
+    <div class="carousel-buttons">
+      <button onclick="prevSlide()">Anterior</button>
+      <button onclick="nextSlide()">Próximo</button>
+    </div>
+  </section>
+
+  <section id="inscricao">
+    <h2>Inscreva-se Agora</h2>
+    <form onsubmit="event.preventDefault(); alert('Inscrição realizada com sucesso!');">
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+      <button type="submit">Inscrever</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
